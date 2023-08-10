@@ -13,7 +13,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.modelfile",
-				"match": "\\b(FROM|SYSTEM|PARAMETER|TEMPLATE)\\b"
+				"match": "\\b(FROM|SYSTEM|PARAMETER|TEMPLATE|EMBED)\\b"
 			}]
 		},
 		"strings": {
