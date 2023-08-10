@@ -2,7 +2,7 @@
   "name": "ollamamodelfile",
   "displayName": "Ollama Modelfile",
   "description": "Language extension for Ollama Modelfiles",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "publisher": "technovangelist",
   "repository": {
     "type": "git",
