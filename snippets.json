@@ -73,7 +73,7 @@
       "You: How are you doing on this wonderful day?",
       "${1:name}: Great, its a lovely day. How are you?",
       "{{- end }}",
-      You: {{.Prompt }}
+      "You: {{.Prompt }}",
       "${1:name}: ",
       "\"\"\""
     ],
