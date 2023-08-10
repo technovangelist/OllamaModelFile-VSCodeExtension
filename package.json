@@ -1,8 +1,9 @@
 {
   "name": "ollamamodelfile",
-  "displayName": "OllamaModelfile",
+  "displayName": "Ollama Modelfile",
   "description": "Language extension for Ollama Modelfiles",
   "version": "0.0.1",
+  "publisher": "technovangelist",
   "repository": {
     "type": "git",
     "url": "https://github.com/technovangelist/OllamaModelFile-VSCodeExtension"
