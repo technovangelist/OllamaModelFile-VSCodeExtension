@@ -66,10 +66,14 @@ export async function activate(context: vscode.ExtensionContext) {
         prompt: "Enter the name of the Model to create",
         value: parentFolder,
       });
-      const model = await axios.post("http://localhost:11434/api/create", {
-        name: modelName,
-        path: vscode.window.activeTextEditor?.document.uri.fsPath,
-      });
+
+      vscode.window.terminals[0].sendText(
+        `ollama create ${modelName} -f ${filePath}`
+      );
+      // const model = await axios.post("http://localhost:11434/api/create", {
+      //   name: modelName,
+      //   path: vscode.window.activeTextEditor?.document.uri.fsPath,
+      // });
     }
   );
 
