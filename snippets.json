@@ -63,6 +63,22 @@
     ],
     "description": "Specify First System Prompt for Alpaca Models"
   },
+  "Template for Pygmalion": {
+    "prefix": ["template pygmalion"],
+    "body": [
+      "TEMPLATE \"\"\"",
+      "{{- if .First }}",
+      "${1:name}'s Persona: Describe the persona here",
+      "<START>",
+      "You: How are you doing on this wonderful day?",
+      "${1:name}: Great, its a lovely day. How are you?",
+      "{{- end }}",
+      You: {{.Prompt }}
+      "${1:name}: ",
+      "\"\"\""
+    ],
+    "description": "Specify First System Prompt for Pygmalion Models"
+  },
   "Temperature": {
     "prefix": "TEMPERATURE",
     "body": ["PARAMETER TEMPERATURE ${1:0.9}", ""],
