@@ -1,4 +1,4 @@
-# Ollama Model File README
+# Ollama Model File Extension for VS Code
 
 Ollama is the best way to run AI Models on your laptop. This extension will help you create and run those models.
 
