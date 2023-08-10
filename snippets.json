@@ -1,0 +1,81 @@
+{
+  "Parent Model": {
+    "prefix": "FROM",
+    "body": "FROM ${1:model}",
+    "description": "Specify parent model"
+  },
+  "System Prompt": {
+    "prefix": "SYSTEM",
+    "body": [
+      "SYSTEM \"\"\"",
+      "${1:You are an AI that answers every question as honestly as possible.}",
+      "\"\"\""
+    ],
+    "description": "Specify system prompt"
+  },
+  "Empty Template": {
+    "prefix": ["template"],
+    "body": ["TEMPLATE \"\"\"", "$1", "\"\"\""],
+    "description": "Template"
+  },
+  "Template": {
+    "prefix": ["template llama2"],
+    "body": [
+      "TEMPLATE \"\"\"",
+      "{{- if and .First .System }}",
+      "<<SYS>>",
+      "{{ .System }}",
+      "<</SYS>>",
+      "{{- end }}",
+      "",
+      "[INST] {{ .Prompt }} [/INST]",
+      "\"\"\""
+    ],
+    "description": "Specify First System Prompt for Llama2 Models"
+  },
+  "Template for Alpaca": {
+    "prefix": ["template alpaca"],
+    "body": [
+      "TEMPLATE \"\"\"",
+      "{{- if and .First .System }}",
+      "### Input:",
+      "{{ .System }}",
+      "{{- end }}",
+      "### Instruction:",
+      "{{ .Prompt }}",
+      "### Response:",
+      "\"\"\""
+    ],
+    "description": "Specify First System Prompt for Alpaca Models"
+  },
+  "Template for Orca": {
+    "prefix": ["template orca"],
+    "body": [
+      "TEMPLATE \"\"\"",
+      "{{- if and .First .System }}",
+      "### System:",
+      "{{ .System }}",
+      "{{- end }}",
+      "### User:",
+      "{{ .Prompt }}",
+      "### Response:",
+      "\"\"\""
+    ],
+    "description": "Specify First System Prompt for Alpaca Models"
+  },
+  "Temperature": {
+    "prefix": "TEMPERATURE",
+    "body": ["PARAMETER TEMPERATURE ${1:0.9}", ""],
+    "description": "Specify temperature"
+  },
+  "TopP": {
+    "prefix": "top p",
+    "body": ["PARAMETER TOP_P ${1:0.50}", ""],
+    "description": "Specify Top P"
+  },
+  "TopK": {
+    "prefix": "top k",
+    "body": ["PARAMETER TOP_K ${1:10}", ""],
+    "description": "Specify Top K"
+  }
+}

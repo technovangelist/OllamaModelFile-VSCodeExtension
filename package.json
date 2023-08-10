@@ -1,0 +1,77 @@
+{
+  "name": "ollamamodelfile",
+  "displayName": "OllamaModelfile",
+  "description": "Language extension for Ollama Modelfiles",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.81.0"
+  },
+  "main": "./out/extension.js",
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "modelfile",
+        "aliases": [
+          "Ollama Modelfile",
+          "modelfile"
+        ],
+        "extensions": [
+          ".Modelfile",
+          ".modelfile"
+        ],
+        "filenamePatterns": [
+          "*.modelfile",
+          "Modelfile",
+          "Modelfile.*"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "modelfile",
+        "path": "./snippets.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "modelfile",
+        "scopeName": "modelfile",
+        "path": "./syntaxes/modelfile.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ollamamodelfile.createModel",
+        "title": "Create Model",
+        "category": "Ollama Modelfile"
+      },
+      {
+        "command": "ollamamodelfile.runModel",
+        "title": "Run a Model",
+        "category": "Ollama Modelfile"
+      },
+      {
+        "command": "ollamamodelfile.runModelVerbose",
+        "title": "Run a Model with Verbose",
+        "category": "Ollama Modelfile"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.9",
+    "@types/vscode": "^1.81.0",
+    "axios": "^1.4.0",
+    "path": "^0.12.7",
+    "vscode-languageserver": "^8.1.0"
+  }
+}
