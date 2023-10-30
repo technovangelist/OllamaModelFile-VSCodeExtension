@@ -1,0 +1,10 @@
+{
+  "tokenColors":[
+    {
+      "scope": "modelfile.keyword",
+      "settings": {
+        "foreground": "#e33333f8"
+      }
+    }
+  ]
+}

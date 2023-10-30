@@ -20,6 +20,13 @@
     "Programming Languages"
   ],
   "contributes": {
+    "themes": [
+      {
+        "label": "Ollama Modelfile",
+        "uiTheme": "hc-light",
+        "path": "./ollama-modelfile-color-theme.json"
+      }
+    ],
     "languages": [
       {
         "id": "modelfile",

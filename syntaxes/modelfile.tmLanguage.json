@@ -10,9 +10,12 @@
     }
   ],
   "repository": {
+    
     "keywords": {
+      
       "patterns": [
         {
+          
           "name": "modelfile.keyword",
           "match": "FROM|TEMPLATE|SYSTEM|PARAMETER"
           
