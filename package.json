@@ -12,6 +12,7 @@
     "vscode": "^1.81.0"
   },
   "main": "./out/extension.js",
+  "activationEvents": [],
   "categories": [
     "Programming Languages"
   ],
