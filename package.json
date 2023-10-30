@@ -11,7 +11,7 @@
   "engines": {
     "vscode": "^1.81.0"
   },
-  "main": "./extension.js",
+  "main": "./out/extension.js",
   "categories": [
     "Programming Languages"
   ],
