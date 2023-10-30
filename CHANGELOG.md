@@ -1,3 +1,12 @@
+## [0.0.16](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/v0.0.15...v0.0.16) (2023-10-30)
+
+
+### Bug Fixes
+
+* activation event ([05714ae](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/commit/05714aeddb2bea8e69eb830ffa5022e035aa6826))
+
+
+
 ## [0.0.15](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/v0.0.14...v0.0.15) (2023-10-30)
 
 
