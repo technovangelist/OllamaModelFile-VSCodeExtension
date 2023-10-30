@@ -1,3 +1,12 @@
+## [0.0.18](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/v0.0.17...v0.0.18) (2023-10-30)
+
+
+### Bug Fixes
+
+* starting to add theme ([d7e78f5](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/commit/d7e78f51b4721d19f2b3c3e0ac167a7e2f2dbf79))
+
+
+
 ## [0.0.17](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/v0.0.16...v0.0.17) (2023-10-30)
 
 
