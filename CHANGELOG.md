@@ -1,3 +1,12 @@
+## [0.0.17](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/v0.0.16...v0.0.17) (2023-10-30)
+
+
+### Bug Fixes
+
+* local models, better grammar ([a7624e1](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/commit/a7624e1c3c2d2646e292632bc54ee323c8d619a7))
+
+
+
 ## [0.0.16](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/v0.0.15...v0.0.16) (2023-10-30)
 
 
