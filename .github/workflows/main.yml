@@ -1,0 +1,28 @@
+name: Publish VSCode Extension
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Conventional Changelog
+        id: changelog
+        uses: TriPSs/conventional-changelog-action@v4.1.1
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 21.1.0
+          registry-url: https://registry.npmjs.org/
+      - run: npm install
+      - run: npm run build
+      - name: Publish to VS Marketplace
+        uses: HaaLeo/publish-vscode-extension@v1.0.0
+        with:
+          pat: ${{ secrets.VS_MARKETPLACE_TOKEN }}
+          registryUrl: https://marketplace.visualstudio.com

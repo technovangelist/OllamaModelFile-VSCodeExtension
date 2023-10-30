@@ -1,9 +1,11 @@
 # Change Log
 
-All notable changes to the "ollamamodelfile" extension will be documented in this file.
+## 0.0.14
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Now with a changelog and a logo
 
-## [Unreleased]
+## 0.0.13
 
-- Initial release
+- Initial real usable release
+- Some completions, including populating the available models
+- Create and Run commands
