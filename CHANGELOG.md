@@ -1,4 +1,13 @@
-## 0.0.14 (2023-10-30)
+## [0.0.15](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/v0.0.14...v0.0.15) (2023-10-30)
+
+
+### Bug Fixes
+
+* asht ([4741e0f](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/commit/4741e0f4ac662379fa16506845676887720492cb))
+
+
+
+## [0.0.14](https://github.com/technovangelist/OllamaModelFile-VSCodeExtension/compare/432ee8c23e30708709523e07b3550089f46f60f5...v0.0.14) (2023-10-30)
 
 
 ### Bug Fixes
