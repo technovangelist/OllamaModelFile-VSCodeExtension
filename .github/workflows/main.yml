@@ -20,7 +20,7 @@ jobs:
           node-version: 21.1.0
           registry-url: https://registry.npmjs.org/
       - run: npm install
-      - run: npm run build
+      # - run: npm run build
       - name: Publish to VS Marketplace
         uses: HaaLeo/publish-vscode-extension@v1.0.0
         with:
