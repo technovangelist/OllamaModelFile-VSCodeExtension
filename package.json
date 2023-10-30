@@ -11,7 +11,6 @@
   "engines": {
     "vscode": "^1.81.0"
   },
-  
   "main": "./extension.js",
   "categories": [
     "Programming Languages"
@@ -81,6 +80,7 @@
     "esbuild": "^0.19.0"
   },
   "dependencies": {
+    "axios": "^1.6.0",
     "node-fetch": "^2.6.12",
     "path": "^0.12.7"
   }
