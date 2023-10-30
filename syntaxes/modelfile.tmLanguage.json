@@ -1,32 +1,36 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Ollama Modelfile",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.modelfile",
-				"match": "\\b(FROM|SYSTEM|PARAMETER|TEMPLATE|EMBED)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.modelfile",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.modelfile",
-					"match": "\\\\."
-				}
-			]
-		}
-	},
-	"scopeName": "source.modelfile"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "modelfile",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "modelfile.keyword",
+          "match": "FROM|TEMPLATE|SYSTEM|PARAMETER"
+          
+        }
+      ]
+    },
+    
+    "strings": {
+      "name": "string.quoted.double.modelfile",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.modelfile",
+          "match": "\\\\."
+        }
+      ]
+    }
+  },
+  "scopeName": "source.modelfile"
 }

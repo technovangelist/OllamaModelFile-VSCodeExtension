@@ -1,6 +1,7 @@
 import * as vscode from "vscode";
 import axios from "axios";
 import * as path from "path";
+import { Ollama } from "ollama-node";
 
 async function getRepositoryList(): Promise<string[]> {
   const response = await axios.get("https://registry.ollama.ai/v2/_catalog");
@@ -52,8 +53,10 @@ function getFilterText(input: string): string | undefined {
 }
 
 export async function activate(context: vscode.ExtensionContext) {
-  const allModels = await getModels();
-  const pulledModels = await getPulledModels();
+  const ollama = new Ollama();
+  const allModels = (await ollama.listModels()).models;
+  // // const allModels = await getModels();
+  // // const pulledModels = await getPulledModels();
 
   const createModel = vscode.commands.registerCommand(
     "ollamamodelfile.createModel",
@@ -70,10 +73,10 @@ export async function activate(context: vscode.ExtensionContext) {
       vscode.window.terminals[0].sendText(
         `ollama create ${modelName} -f ${filePath}`
       );
-      // const model = await axios.post("http://localhost:11434/api/create", {
-      //   name: modelName,
-      //   path: vscode.window.activeTextEditor?.document.uri.fsPath,
-      // });
+      //     // const model = await axios.post("http://localhost:11434/api/create", {
+      //     //   name: modelName,
+      //     //   path: vscode.window.activeTextEditor?.document.uri.fsPath,
+      //     // });
     }
   );
 
@@ -127,7 +130,7 @@ export async function activate(context: vscode.ExtensionContext) {
           item.filterText = getFilterText(m);
           modelArray.push(item);
         });
-        modelArray = modelArray.concat(pulledModels);
+        // modelArray = modelArray.concat(pulledModels);
         // const simpleCompletion = new vscode.CompletionItem(`FROM ${allModels}`);
         // const snippetCompletion = new vscode.CompletionItem('Good part of the day');
 
